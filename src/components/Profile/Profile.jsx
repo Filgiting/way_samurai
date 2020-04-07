@@ -6,14 +6,14 @@ const Profile = () => {
     return (
         <div>
             <div>
-                <img src='https://farm66.static.flickr.com/65535/48752283542_2960cf0e67_b.jpg' />
+                <img src='https://farm66.static.flickr.com/65535/48752283542_2960cf0e67_b.jpg'/>
             </div>
             <div>
                 ava+descript
             </div>
 
-            <MyPosts />
-            
+            <MyPosts/>
+
         </div>
     );
 }
