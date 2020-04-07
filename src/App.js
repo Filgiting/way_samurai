@@ -21,6 +21,8 @@ const App = () => {
                     <Route path='/profile' component={Profile}/>
                     <Route path='/dialogs' component={Dialogs}/>
                     <Route path='/news' component={News}/>
+                    {/*<Route path='/music' component={Music}/>*/}
+                    {/*<Route path='/settigs' component={Settigs}/>*/}
                 </div>
 
             </div>
