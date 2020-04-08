@@ -5,17 +5,20 @@ import Post from './Post/Post';
 
 const MyPosts = () => {
     return (
-        <div>
-            My post
+        <div className={style.postBlock}>
+            <h3>My post</h3>
             <div>
-                New post
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                </div>
             </div>
 
-            <button>Add post</button>
-
             <div className={style.posts}>
-                <Post message='Hi, how are you?' count='10' />
-                <Post message="It's my first post" count='20' />
+                <Post message='Hi, how are you?' count='10'/>
+                <Post message="It's my first post" count='20'/>
             </div>
         </div>
     );
