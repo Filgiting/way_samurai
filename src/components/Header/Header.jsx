@@ -4,7 +4,7 @@ import style from './Header.module.css';
 const Header = () => {
     return (
         <header className={style.header}>
-            <img src='https://i.pinimg.com/736x/5a/ae/50/5aae503e4f037a5a4375944d8861fb6a.jpg'/>
+            <img src='http://marveltheme.com/tf/html/covids/covids/images/logo-2x.png' />
         </header>
     );
 }
