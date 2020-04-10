@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import DialogItem from "./components/Dialogs/DialogItem/DialogItem";
 
 let dialogs = [
     {id: 1, name: 'Dimich'},
