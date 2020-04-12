@@ -22,7 +22,19 @@ let state = {
         {id: 3, message: 'Hi Fil bil'},
         {id: 4, message: 'Hi Bil dil'}
     ]
-    }
+    },
+
+    sideBar: {}
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likeCount: 7
+    };
+
+    state.profilePage.posts.push(newPost);
 }
 
 export default state;
