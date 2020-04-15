@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import store from './redux/redux-store';
-import {Provider} from "./StoreContext";
+import {Provider} from "react-redux";
 
 
 let renderEntireTree = () => {
@@ -22,7 +22,7 @@ let renderEntireTree = () => {
     );
 }
 
-renderEntireTree(store.getState());
+renderEntireTree();
 
 store.subscribe(() => {
     renderEntireTree();
