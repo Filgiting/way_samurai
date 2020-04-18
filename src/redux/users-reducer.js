@@ -5,8 +5,7 @@ const SET_USERS = 'SET_USERS';
 let initialState = {
     users: [
 
-    ],
-    newPostText: 'fil_bli_kil.com'
+    ]
 };
 
 const usersReducer = (state = initialState, action) => {
