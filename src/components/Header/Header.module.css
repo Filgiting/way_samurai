@@ -10,7 +10,8 @@
 
 .loginBlock {
     float: right;
-    color: springgreen;
+    color: sandybrown;
+    padding: 15px;
 }
 
 .loginBlock a {
