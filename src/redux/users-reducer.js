@@ -75,6 +75,7 @@ export const setUsersTotalCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_C
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 export const toggleIsFollowingProgress = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId});
 
+//thunk
 export const getUsers = (currentPage, pageSize) => {
     return (dispatch) => {
 
@@ -104,7 +105,7 @@ export const follow = (userId) => {
                 dispatch(toggleIsFollowingProgress(false, userId));
             });
     }
-}
+};
 
 export const unfollow = (userId) => {
     return (dispatch) => {
@@ -119,6 +120,6 @@ export const unfollow = (userId) => {
                 dispatch(toggleIsFollowingProgress(false, userId));
             });
     }
-}
+};
 
 export default usersReducer;
