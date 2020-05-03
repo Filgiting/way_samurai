@@ -8,11 +8,12 @@ const Header = (props) => {
             <img src='http://marveltheme.com/tf/html/covids/covids/images/logo-2x.png' />
 
             <div className={style.loginBlock}>
-                { props.isAuth ? props.login
+                { props.isAuth
+                    ? <div> {props.login} - <button onClick={props.logout}>Log out</button> </div>
                     : <NavLink to={'/login'}>Login</NavLink> }
             </div>
         </header>
     );
-}
+};
 
 export default Header;
