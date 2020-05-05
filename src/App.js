@@ -11,6 +11,7 @@ import {connect} from 'react-redux';
 import {compose} from 'redux';
 import {initializeApp} from './redux/app-reducer';
 import Preloader from "./components/common/Preloader/Preloader";
+import News from "./components/News/News";
 
 class App extends React.Component {
 
@@ -37,6 +38,7 @@ class App extends React.Component {
                     <Route path='/dialogs' render={() => <DialogsContainer/>}/>
                     <Route path='/users' render={() => <UsersContainer/>}/>
                     <Route path='/login' render={() => <LoginPage/>}/>
+                    <Route path='/news' render={() => <News/>}/>
 
                 </div>
             </div>
