@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import App from './App';
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter} from 'react-router-dom';
 import store from './redux/redux-store';
-import {Provider} from "react-redux";
+import {Provider} from 'react-redux';
 
 ReactDOM.render(
     <React.StrictMode>

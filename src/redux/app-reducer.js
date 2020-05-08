@@ -30,9 +30,9 @@ export const initializeApp = () => (dispatch) => {
 
     let promise = dispatch(getAuthUserData());
 
-    promise.then(() => {
+    Promise.all([promise]).then(() => {
         dispatch(initializedSuccess());
-    })
+    });
 };
 
 export default appReducer;

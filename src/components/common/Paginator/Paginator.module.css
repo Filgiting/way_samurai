@@ -1,0 +1,11 @@
+
+.selectedPage {
+    font-weight: bold;
+}
+div span {
+    padding: 3px;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}

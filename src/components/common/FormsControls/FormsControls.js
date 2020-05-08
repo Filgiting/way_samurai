@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './FormsControls.module.css';
 
-export const Element = Element => ({input, meta, ...props}) => {
+export const Element = Element => ({input, meta: {touched, error}, ...props}) => {
 
-    const hasError = meta.touched && meta.error;
+    const hasError = touched && error;
 
     return (
 
@@ -11,7 +11,7 @@ export const Element = Element => ({input, meta, ...props}) => {
             <div>
                 <Element {...input} {...props} />
             </div>
-            {hasError && <span>{meta.error}</span> }
+            {hasError && <span>{error}</span> }
         </div>
     );
 };
