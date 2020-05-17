@@ -1,27 +1,43 @@
-import React, {useState} from 'react';
-import style from './News.module.css'
+import React from "react";
+import PropTypes from "prop-types";
+import Article from "./Article";
+import styles from './News.module.css';
 
-const News = () => {
+class News extends React.Component {
 
-    const [count, setCount] = useState(0);
+    renderNews = () => {
+        const { data } = this.props
+        let newsTemplate = null
 
-    function handleAlertClick() {
-        setTimeout(() => {
-            alert('You clicked on: ' + count);
-        }, 3000);
+        if (data.length) {
+            newsTemplate = data.map(function (item) {
+                return <Article key={item.id} data={item} />
+            })
+        } else {
+            newsTemplate = <p>К сожалению новостей нет</p>
+        }
+        return newsTemplate
     }
 
-    return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-            </button>
-            <button onClick={handleAlertClick}>
-                Show alert
-            </button>
-        </div>
-    );
+    render() {
+        const { data } = this.props
+
+        return (
+            <div className={styles.news}>
+                {this.renderNews()}
+                {
+                    data.length
+                        ? <strong className={styles.news__count}>
+                            Всего новостей: {data.length}</strong>
+                        : null
+                }
+            </div>
+        );
+    }
+}
+
+News.propTypes = {
+    data: PropTypes.array.isRequired
 };
 
 export default News;
