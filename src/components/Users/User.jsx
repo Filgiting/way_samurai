@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 let User = ({user, followingInProgress, btnUnfollow, btnFollow}) => {
 
     return (
-        <div>
+        <div className={styles.user}>
                 <span>
                     <div>
                         <NavLink to={'/profile/' + user.id}>
@@ -14,7 +14,7 @@ let User = ({user, followingInProgress, btnUnfollow, btnFollow}) => {
                                  className={styles.userPhoto}/>
                         </NavLink>
                     </div>
-                    <div>
+                    <div className={styles.btn}>
                         {user.followed
 
                             ? <button disabled={followingInProgress.some(id => id === user.id)}

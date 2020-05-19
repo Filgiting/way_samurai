@@ -8,7 +8,7 @@ import {Element} from "../../common/FormsControls/FormsControls";
 const MyPosts = React.memo(props => {
 
     let postsElement = [...props.posts]
-        .reverse().map(post => <Post message={post.message} likeCount={post.likeCount}/>);
+        .reverse().map(post => <Post key={post.id} message={post.message} likeCount={post.likeCount}/>);
 
     let addNewPost = (values) => {
         props.addPost(values.newPostText);

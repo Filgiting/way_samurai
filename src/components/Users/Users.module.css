@@ -2,3 +2,8 @@
     width: 80px;
     height: 90px;
 }
+
+.user,
+.btn {
+    margin: 10px;
+}

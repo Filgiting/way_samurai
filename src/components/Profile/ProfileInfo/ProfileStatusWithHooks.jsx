@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
+import style from './ProfileInfo.module.css';
 
 const ProfileStatusWithHooks = (props) => {
     //hook local state
     let [editMode, setEditMode] = useState(false);
     let [status, setStatus] = useState(props.status);
 
-    useEffect( () => {
+    useEffect(() => {
         setStatus(props.status);
-    }, [props.status] );
+    }, [props.status]);
 
     const activateEditMode = () => {
         setEditMode(true);
@@ -25,8 +26,8 @@ const ProfileStatusWithHooks = (props) => {
     return (
         <div>
             {!editMode &&
-            <div>
-                <span onDoubleClick={activateEditMode}> {props.status || '---------'}</span>
+            <div className={style.status}>
+                <b>Status:</b><span onDoubleClick={activateEditMode}> {props.status || '---------'}</span>
             </div>
             }
 
@@ -39,6 +40,6 @@ const ProfileStatusWithHooks = (props) => {
             }
         </div>
     );
-}
+};
 
 export default ProfileStatusWithHooks;

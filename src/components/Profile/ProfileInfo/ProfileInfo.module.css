@@ -1,3 +1,18 @@
 .descriptionBlock {
     padding: 10px;
 }
+
+.userPhoto {
+    width: 130px;
+    height: 140px;
+}
+
+.contact {
+    margin: 5px;
+    padding-left: 10px;
+}
+
+.status {
+    margin: 10px;
+    color: darkorange;
+}
